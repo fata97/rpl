@@ -2,9 +2,20 @@
 <html>
 <head>
 	<title></title>
+    <style type="text/css">
+        .tombol{
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
+<<<<<<< HEAD
+    <div class="tombol" >
+        <a href="tambah_data_siswa.php"><button type="button" class="btn btn-success btn-md " >Tambah Data </button></a>
+    </div>
+=======
 <div class="table-responsive">
+>>>>>>> c6856390295e739c01b6004ed48a7d78b5ccf5e1
 	<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
             <tr>
@@ -15,8 +26,12 @@
                 <th>AGAMA</th>
                 <th>ALAMAT</th>
                 <th>NO_HP</th>
+<<<<<<< HEAD
+                <th>KELAS</th>
+=======
 								<th>KELAS</th>
 								<th>AKSI</th>
+>>>>>>> c6856390295e739c01b6004ed48a7d78b5ccf5e1
             </tr>
         </thead>
         <tbody>
