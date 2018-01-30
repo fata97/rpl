@@ -35,7 +35,6 @@
 			      $i++;
 			      }
 			    ?>
-
         </tbody>
     </table>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
