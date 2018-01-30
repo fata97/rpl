@@ -6,21 +6,35 @@
         .tombol {
             margin-bottom: 20px;
         }
+
+        h1{
+        	padding-bottom: 20px;
+        	text-align: center;
+        }
+
+        .box {
+        	border-style: outset;
+        	padding: 25px;
+        	border-radius: 0px 40px 0px 40px;
+        }
     </style>
 </head>
 <body>
+	<h1>DATA GURU</h1>
+
+	<div class="box">
     <div class="tombol" >
         <a href="tambah_data_guru.php"><button type="button" class="btn btn-success btn-md " >Tambah Data </button></a>
     </div>
 	<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
             <tr>
-								<th>NO</th>
+				<th>N</th>
                 <th>NIP</th>
-                <th>NAMA</th>
-                <th>ALAMAT</th>
-                <th>NO_HP</th>
-								<th>AKSI</th>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>No_Hp</th>
+				<th>Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -45,6 +59,7 @@
 			    ?>
         </tbody>
     </table>
+    </div>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
@@ -53,5 +68,6 @@
     $('#example').DataTable();
 	} );
 	</script>
+
 </body>
 </html>

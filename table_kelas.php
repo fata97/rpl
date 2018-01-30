@@ -2,13 +2,30 @@
 <html>
 <head>
 	<title></title>
+	<style type="text/css">
+		h1{
+			padding-bottom: 20px;
+			text-align: center;
+		}
+
+		.box {
+        	border-style: outset;
+        	padding: 25px;
+        	border-radius: 0px 40px 0px 40px;
+        }
+
+	</style>
 </head>
 <body>
+	<h1>DATA KELAS</h1>
+
+	<div class="box">	
 	<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
             <tr>
                 <th>No</th>
                 <th>Nama Kelas</th>
+                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -30,6 +47,7 @@
 					?>
         </tbody>
     </table>
+    </div> 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
