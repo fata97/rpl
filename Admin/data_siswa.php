@@ -19,8 +19,6 @@
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
-  <!-- Navigation-->
-  <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <a class="navbar-brand" href="index.html">Laundry</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,31 +27,31 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href="index.php">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="data_transaksi.php">
+          <a class="nav-link" href="data_siswa.php">
             <i class="fa fa-fw fa-area-chart"></i>
             <span class="nav-link-text">Data Siswa</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="data_pakaian.php">
+          <a class="nav-link" href="data_guru.php">
             <i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">Data Guru</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="data_pelanggan.php">
+          <a class="nav-link" href="data_kelas.php">
             <i class="fa fa-fw fa-sitemap"></i>
             <span class="nav-link-text">Data Kelas</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="data_pelanggan.php">
+          <a class="nav-link" href="data_mata_pelajaran.php">
             <i class="fa fa-fw fa-sitemap"></i>
             <span class="nav-link-text">Data Mata Pelajaran</span>
           </a>
@@ -94,66 +92,19 @@
         <li class="breadcrumb-item">
           <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Data Pakaian</li>
+        <li class="breadcrumb-item active">Data Siswa</li>
       </ol>
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Data Pakaian</div>
+          <i class="fa fa-table"></i> Data Siswa</div>
         <div class="container">
           <div class="container">
-  <hr>
-  <div class="tombol" >
-    <a href="tambahdatapakaian.php"><button type="button" class="btn btn-success btn-md " >Tambah Data </button></a>
-  </div>
-  <br>
-  <table id="table" class="table table-striped table-bordered table-responsive" >
-    <thead>
-      <tr>
-        <th style="text-align: center;">No</th>
-        <th>Kode Pakaian</th>
-        <th>Jenis Pakaian</th>
-        <th style="text-align: center;" >Aksi</th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php
-        include "../include/koneksi.php";
-        $i = 0 + 1;
-        $sql = mysqli_query($conn, "SELECT * FROM pakaian ORDER BY Id_Pakaian");
-        while ($hasil = mysqli_fetch_array($sql)) {
-     ?>
-  <tr>
-      <td style="text-align: center;"><?php echo $i; ?></td>
-      <td><?php echo $hasil['Id_Pakaian']; ?></td>
-      <td><?php echo $hasil['Jenis_Pakaian']; ?></td>
-      <td style="text-align: center;"><a href="editdatapakaian.php?edit=<?php echo $hasil['Id_Pakaian']; ?>" class="btn btn-warning">Edit</a>
-      <a href="proses-hapus-pakaian.php?hapus=<?php echo $hasil['Id_Pakaian']; ?>" class="btn btn-danger">Hapus</a></td>
-  </tr>
-  <?php
-      $i++;
-      }
-    ?>
-
-  </tbody>
-  </table>
-<br>
-<br>
-<br>
-</div>
-
-
-
-<script>
-    $(document).ready(function() {
-     $('#table').DataTable();
-  } );
-</script>
+  
       </div>
   
-    <!-- /.container-fluid-->
-    <!-- /.content-wrapper-->
-    <footer class="sticky-footer">
+    <br>
+    <footer class="">
       <div class="container">
         <div class="text-center">
           <small>Copyright © Your Website 2018</small>

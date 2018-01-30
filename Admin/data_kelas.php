@@ -12,16 +12,13 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Page level plugin CSS-->
+  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
-  <?php
-      include "../include/header.php";
-  ?>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
-  <!-- Navigation-->
-  <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <a class="navbar-brand" href="index.html">Laundry</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,31 +27,31 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href="index.php">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="data_transaksi.php">
+          <a class="nav-link" href="data_siswa.php">
             <i class="fa fa-fw fa-area-chart"></i>
             <span class="nav-link-text">Data Siswa</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="data_pakaian.php">
+          <a class="nav-link" href="data_guru.php">
             <i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">Data Guru</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="data_pelanggan.php">
+          <a class="nav-link" href="data_kelas.php">
             <i class="fa fa-fw fa-sitemap"></i>
             <span class="nav-link-text">Data Kelas</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="data_pelanggan.php">
+          <a class="nav-link" href="data_mata_pelajaran.php">
             <i class="fa fa-fw fa-sitemap"></i>
             <span class="nav-link-text">Data Mata Pelajaran</span>
           </a>
@@ -95,81 +92,19 @@
         <li class="breadcrumb-item">
           <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Data Transaksi</li>
+        <li class="breadcrumb-item active">Data Kelas</li>
       </ol>
-      <!-- Area Chart Example-->
+      <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-area-chart"></i> Area Data Transaksi</div>
-        <div class="card-body">
-          <nav class="navbar navbar-default" >
-      <div class="container-fluid">
-        <div class="navbar-header">
-    </div>
-  </div>
-
-<div class="container">
-  <h3>Data Transaksi</h3>
-  <hr>
-  <br>
-  <table id="table" class="table table-striped table-bordered table-responsive" >
-    <thead>
-      <tr>
-        <th style="text-align: center;">No</th>
-        <th>No. Order</th>
-        <th>Nama</th>
-        <th>Tanggal Terima</th>
-        <th>Tanggal Ambil</th>
-        <th>Berat</th>
-        <th>Diskon</th>
-        <th>Total Bayar</th>
-        <th style="text-align: center;" >Aksi</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <?php
-        include "../include/koneksi.php";
-        $i = 0 + 1;
-        $sql = mysqli_query($conn, "SELECT transaksi.*, pelanggan.Nama FROM transaksi join pelanggan where transaksi.No_Identitas = pelanggan.No_Identitas  ORDER BY `No_Identitas`");
-        while ($hasil = mysqli_fetch_array($sql)) {
-     ?>
-  <tr>
-      <td style="text-align: center;"><?php echo $i; ?></td>
-      <td><?php echo $hasil['No_Order']; ?></td>
-      <td><?php echo $hasil['Nama']; ?></td>
-      <td><?php echo $hasil['Tgl_Terima']; ?></td>
-      <td><?php echo $hasil['Tgl_Ambil']; ?></td>
-      <td><?php echo $hasil['total_berat']; ?></td>
-      <td><?php echo $hasil['diskon']; ?></td>
-      <td><?php echo $hasil['Total_Bayar']; ?></td>
-      <td style="text-align: center;"><a href="detailtransaksi.php?detail=<?php echo $hasil['No_Order']; ?>" class="btn btn-info">Detail</a>  <a href="editdatatransaksi.php?edit=<?php echo $hasil['No_Order']; ?>" class="btn btn-warning">Edit</a>
-      <a href="proses-hapus-transaksi.php?hapus=<?php echo $hasil['No_Order']; ?>" class="btn btn-danger">Hapus</a></td>
-  </tr>
-  <?php
-      $i++;
-      }
-    ?>
-
-  </tbody>
-  </table>
-  <br>
-  <br>
-</div>
-
-<script>
-    $(document).ready(function() {
-     $('#table').DataTable();
-  } );
-</script>
-        </div>
-        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+          <i class="fa fa-table"></i> Data Kelas</div>
+        <div class="container">
+          <div class="container">
+  
       </div>
-      
-    </div>
-    <!-- /.container-fluid-->
-    <!-- /.content-wrapper-->
-    <footer class="sticky-footer">
+  
+    <br>
+    <footer class="">
       <div class="container">
         <div class="text-center">
           <small>Copyright © Your Website 2018</small>
@@ -204,11 +139,12 @@
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Page level plugin JavaScript-->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin.min.js"></script>
     <!-- Custom scripts for this page-->
-    <script src="js/sb-admin-charts.min.js"></script>
+    <script src="js/sb-admin-datatables.min.js"></script>
   </div>
 </body>
 

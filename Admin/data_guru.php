@@ -27,31 +27,31 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href="index.php">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="data_transaksi.php">
+          <a class="nav-link" href="data_siswa.php">
             <i class="fa fa-fw fa-area-chart"></i>
             <span class="nav-link-text">Data Siswa</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="data_pakaian.php">
+          <a class="nav-link" href="data_guru.php">
             <i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">Data Guru</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="data_pelanggan.php">
+          <a class="nav-link" href="data_kelas.php">
             <i class="fa fa-fw fa-sitemap"></i>
             <span class="nav-link-text">Data Kelas</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="data_pelanggan.php">
+          <a class="nav-link" href="data_mata_pelajaran.php">
             <i class="fa fa-fw fa-sitemap"></i>
             <span class="nav-link-text">Data Mata Pelajaran</span>
           </a>
@@ -92,71 +92,19 @@
         <li class="breadcrumb-item">
           <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Data Pelanggan</li>
+        <li class="breadcrumb-item active">Data Guru</li>
       </ol>
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Data Pelanggan</div>
+          <i class="fa fa-table"></i> Data Guru</div>
         <div class="container">
           <div class="container">
-  <hr>
-<div class="container">
-  <h3>Data Pelanggan</h3>
-  <hr>
-  <div class="tombol" >
-    <a href="tambahdatapelanggan.php"><button type="button" class="btn btn-success btn-md " >Tambah Data </button></a>
-  </div>
-  <br>
-  <table id="table" class="table table-striped table-bordered table-responsive" >
-    <thead>
-      <tr>
-        <th style="text-align: center;">No</th>
-        <th>No. Identitas</th>
-        <th>Nama</th>
-        <th>Alamat</th>
-        <th>No. Hp</th>
-        <th style="text-align: center;" >Aksi</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <?php
-        include "../include/koneksi.php";
-        $i = 0 + 1;
-        $sql = mysqli_query($conn, "SELECT * FROM pelanggan ORDER BY `No_Identitas`");
-        while ($hasil = mysqli_fetch_array($sql)) {
-     ?>
-  <tr>
-      <td style="text-align: center;"><?php echo $i; ?></td>
-      <td><?php echo $hasil['No_Identitas']; ?></td>
-      <td><?php echo $hasil['Nama']; ?></td>
-      <td><?php echo $hasil['Alamat']; ?></td>
-      <td><?php echo $hasil['No_Hp']; ?></td>
-      <td style="text-align: center;"><a href="editdatapelanggan.php?edit=<?php echo $hasil['No_Identitas']; ?>" class="btn btn-warning">Edit</a>
-      <a href="proses-hapus-pelanggan.php?hapus=<?php echo $hasil['No_Identitas']; ?>" class="btn btn-danger">Hapus</a></td>
-  </tr>
-  <?php
-      $i++;
-      }
-    ?>
-
-  </tbody>
-  </table>
-  <br>
-  <br>
-</div>
-
-<script>
-    $(document).ready(function() {
-     $('#table').DataTable();
-  } );
-</script>
+  
       </div>
   
-    <!-- /.container-fluid-->
-    <!-- /.content-wrapper-->
-    <footer class="sticky-footer">
+    <br>
+    <footer class="">
       <div class="container">
         <div class="text-center">
           <small>Copyright © Your Website 2018</small>
