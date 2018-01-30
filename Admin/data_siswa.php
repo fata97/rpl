@@ -88,34 +88,20 @@
   <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="#">Dashboard</a>
-        </li>
-        <li class="breadcrumb-item active">Data Siswa</li>
-      </ol>
+      
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Data Siswa</div>
-        <div class="container">
-          <div class="container">
-  
-      </div>
-  
-    <br>
-    <footer class="">
-      <div class="container">
-        <div class="text-center">
-          <small>Copyright © Your Website 2018</small>
+          <i class="fa fa-table"></i> Data Mata Siswa</div>
         </div>
-      </div>
-    </footer>
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fa fa-angle-up"></i>
-    </a>
-    <!-- Logout Modal-->
+        <div class="container">
+          <?php  
+              require_once "../table_siswa.php";
+          ?>
+        </div>
+      </div>  
+    </div>
+  </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">

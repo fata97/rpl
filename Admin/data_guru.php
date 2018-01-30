@@ -53,7 +53,7 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
           <a class="nav-link" href="data_mata_pelajaran.php">
             <i class="fa fa-fw fa-sitemap"></i>
-            <span class="nav-link-text">Data Mata Pelajaran</span>
+            <span class="nav-link-text">Data Guru</span>
           </a>
         </li>
         </li>
@@ -88,34 +88,20 @@
   <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="#">Dashboard</a>
-        </li>
-        <li class="breadcrumb-item active">Data Guru</li>
-      </ol>
+      
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
           <i class="fa fa-table"></i> Data Guru</div>
-        <div class="container">
-          <div class="container">
-  
-      </div>
-  
-    <br>
-    <footer class="">
-      <div class="container">
-        <div class="text-center">
-          <small>Copyright © Your Website 2018</small>
         </div>
-      </div>
-    </footer>
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fa fa-angle-up"></i>
-    </a>
-    <!-- Logout Modal-->
+        <div class="container">
+          <?php  
+              require_once "../table_guru.php";
+          ?>
+        </div>
+      </div>  
+    </div>
+  </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
