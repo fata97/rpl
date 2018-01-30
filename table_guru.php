@@ -50,7 +50,7 @@
 			      <td><?php echo $hasil['nama']; ?></td>
 						<td><?php echo $hasil['alamat']; ?></td>
 						<td><?php echo $hasil['no_hp']; ?></td>
-			      <td style="text-align: center;"><a href="editguru.php?edit=<?php echo $hasil['nip']; ?>" class="btn btn-warning">Edit</a>
+			      <td style="text-align: center;"><a href="edit_data_guru.php?edit=<?php echo $hasil['nip']; ?>" class="btn btn-warning">Edit</a>
 			      <a href="proses-hapus-guru.php?hapus=<?php echo $hasil['nip']; ?>" class="btn btn-danger">Hapus</a></td>
 			  </tr>
 			  <?php

@@ -10,13 +10,14 @@
 </head>
 <body>
 	<div class="tombol" >
-        <a href="tambah_data_guru.php"><button type="button" class="btn btn-success btn-md " >Tambah Data </button></a>
+        <a href="tambah_data_mapel.php"><button type="button" class="btn btn-success btn-md " >Tambah Data </button></a>
     </div>
 	<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
             <tr>
-								<th>No</th>
+				<th>No</th>
                 <th>Nama Mapel</th>
+                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -29,7 +30,7 @@
 					 <tr>
 						<td style="text-align: center;"><?php echo $i; ?></td>
 						<td><?php echo $hasil['nama']; ?></td>
-						<td style="text-align: center;"><a href="editmapel.php?edit=<?php echo $hasil['id_mapel']; ?>" class="btn btn-warning">Edit</a>
+						<td style="text-align: center;"><a href="edit_data_mapel.php?edit=<?php echo $hasil['id_mapel']; ?>" class="btn btn-warning">Edit</a>
 						<a href="proses-hapus-mapel.php?hapus=<?php echo $hasil['id_mapel']; ?>" class="btn btn-danger">Hapus</a></td>
 				</tr>
 				<?php

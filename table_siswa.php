@@ -46,7 +46,7 @@
 						<td><?php echo $hasil['alamat']; ?></td>
 						<td><?php echo $hasil['no_hp']; ?></td>
 						<td><?php echo $hasil['nama_kelas']; ?></td>
-			      <td style="text-align: center;"><a href="editsiswa.php?edit=<?php echo $hasil['nis']; ?>" class="btn btn-warning">Edit</a>
+			      <td style="text-align: center;"><a href="edit_data_siswa.php?edit=<?php echo $hasil['nis']; ?>" class="btn btn-warning">Edit</a>
 			      <a href="proses-hapus-siswa.php?hapus=<?php echo $hasil['nis']; ?>" class="btn btn-danger">Hapus</a></td>
 			  </tr>
 			  <?php

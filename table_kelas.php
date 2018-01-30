@@ -3,6 +3,9 @@
 <head>
 	<title></title>
 	<style type="text/css">
+		.tombol {
+			padding-bottom: 20px;
+		}
 		h1{
 			padding-bottom: 20px;
 			text-align: center;
@@ -20,6 +23,9 @@
 	<h1>DATA KELAS</h1>
 
 	<div class="box">	
+	<div class="tombol" >
+        <a href="tambah_data_kelas.php"><button type="button" class="btn btn-success btn-md " >Tambah Data </button></a>
+    </div>
 	<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
             <tr>
@@ -38,8 +44,8 @@
 					 <tr>
 						<td style="text-align: center;"><?php echo $i; ?></td>
 						<td><?php echo $hasil['nama_kelas']; ?></td>
-						<td style="text-align: center;"><a href="editkelas.php?edit=<?php echo $hasil['id_kelas']; ?>" class="btn btn-warning">Edit</a>
-						<a href="proses-hapus-kelas.php?hapus=<?php echo $hasil['id_kelas']; ?>" class="btn btn-danger">Hapus</a></td>
+						<td style="text-align: center;"><a href="edit_data_kelas.php?edit=<?php echo $hasil['id_kelas']; ?>" class="btn btn-warning">Edit</a>
+						<a href="proses-edit-kelas.php?hapus=<?php echo $hasil['id_kelas']; ?>" class="btn btn-danger">Hapus</a></td>
 				</tr>
 				<?php
 						$i++;
