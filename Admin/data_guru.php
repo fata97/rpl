@@ -53,7 +53,7 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
           <a class="nav-link" href="data_mata_pelajaran.php">
             <i class="fa fa-fw fa-sitemap"></i>
-            <span class="nav-link-text">Data Guru</span>
+            <span class="nav-link-text">Data Mata Pelajaran</span>
           </a>
         </li>
         </li>

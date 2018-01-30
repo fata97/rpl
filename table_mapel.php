@@ -2,8 +2,16 @@
 <html>
 <head>
 	<title></title>
+	<style type="text/css">
+		.tombol {
+			padding-bottom: 20px;
+		}
+	</style>
 </head>
 <body>
+	<div class="tombol" >
+        <a href="tambah_data_guru.php"><button type="button" class="btn btn-success btn-md " >Tambah Data </button></a>
+    </div>
 	<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
             <tr>
