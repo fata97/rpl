@@ -9,18 +9,14 @@
   	<h3>TAMBAH DATA GURU</h3>
   	<hr>
   		<br>
-	<form action="#" method="POST" >
+	<form action="proses-tambah-guru.php" method="POST" >
         <div class="form-group">
           <label>NIP Guru</label>
-          <input type="text" class="form-control" name="NIS" placeholder="NIS Guru" style="width: 250px" >
+          <input type="text" class="form-control" name="nip" placeholder="NIP Guru" style="width: 250px" >
         </div>
         <div class="form-group">
           <label>Nama Guru</label>
           <input type="text" class="form-control" name="nama_guru" placeholder="Nama Guru" style="width: 250px" >
-        </div>
-        <div class="form-group">
-          <label>Alamat</label>
-          <input type="text" class="form-control" name="alamat" placeholder="Alamat Guru" style="width: 250px" >
         </div>
         <div class="form-group">
           <label>Nomer Handphone</label>
@@ -28,12 +24,20 @@
         </div>
         <div class="form-group">
           <label>Alamat</label>
-          <input type="text" class="form-control" name="Alamat" placeholder="Alamat" style="width: 250px" >
+					<textarea name="alamat" rows="3" class="form-control" style="width: 250px"></textarea>
+				</div>
+				<div class="form-group">
+          <label>Username</label>
+          <input type="text" class="form-control" name="username" placeholder="Username" style="width: 250px" >
         </div>
-
+				<div class="form-group">
+          <label>Password</label>
+          <input type="text" class="form-control" name="password" placeholder="password" style="width: 250px" >
+        </div>
       <input type="submit" name="submit" value="Simpan" class="btn btn-success">
       <a href="data_guru.php"><input type="button" class="btn btn-default" value="Batal" ></a>
       </form>
+			<br>
 </div>
 </body>
 </html>

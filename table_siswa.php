@@ -9,13 +9,12 @@
     </style>
 </head>
 <body>
-<<<<<<< HEAD
     <div class="tombol" >
         <a href="tambah_data_siswa.php"><button type="button" class="btn btn-success btn-md " >Tambah Data </button></a>
     </div>
-=======
+
 <div class="table-responsive">
->>>>>>> c6856390295e739c01b6004ed48a7d78b5ccf5e1
+
 	<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
             <tr>
@@ -26,12 +25,9 @@
                 <th>AGAMA</th>
                 <th>ALAMAT</th>
                 <th>NO_HP</th>
-<<<<<<< HEAD
                 <th>KELAS</th>
-=======
-								<th>KELAS</th>
 								<th>AKSI</th>
->>>>>>> c6856390295e739c01b6004ed48a7d78b5ccf5e1
+
             </tr>
         </thead>
         <tbody>
@@ -49,7 +45,7 @@
 						<td><?php echo $hasil['agama']; ?></td>
 						<td><?php echo $hasil['alamat']; ?></td>
 						<td><?php echo $hasil['no_hp']; ?></td>
-						<td><?php echo $hasil['nama']; ?></td>
+						<td><?php echo $hasil['nama_kelas']; ?></td>
 			      <td style="text-align: center;"><a href="editguru.php?edit=<?php echo $hasil['nip']; ?>" class="btn btn-warning">Edit</a>
 			      <a href="proses-hapus-guru.php?hapus=<?php echo $hasil['nip']; ?>" class="btn btn-danger">Hapus</a></td>
 			  </tr>
