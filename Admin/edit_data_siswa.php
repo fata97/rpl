@@ -88,7 +88,7 @@
   <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
-      
+
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
@@ -99,68 +99,79 @@
     <h3>EDIT DATA SISWA</h3>
     <hr>
       <br>
-  <form action="proses-tambah-siswa.php" method="POST" >
+      <?php
+          include "../include/koneksi.php";
+          $id_siswa = $_GET['edit'];
+
+          $sql = mysqli_query($conn, "SELECT * FROM siswa WHERE nis='".$id_siswa."'");
+          while ($hasil = mysqli_fetch_array($sql)) {
+       ?>
+  <form action="proses-edit-siswa.php" method="POST" >
     <div class="row">
-        <div class="col-sm-3">
+        <div class="col-md-4">
           <div class="form-group">
           <label>NIS Siswa</label>
-          <input type="text" class="form-control" name="nis" placeholder="NIS Siswa" style="width: 250px" >
+          <input type="text" class="form-control" name="nis" placeholder="NIS Siswa"  value="<?php echo $hasil['nis']; ?>" readonly>
         </div>
         <div class="form-group">
           <label>Nama Siswa</label>
-          <input type="text" class="form-control" name="nama_siswa" placeholder="Nama Siswa" style="width: 250px" >
+          <input type="text" class="form-control" name="nama_siswa" placeholder="Nama Siswa" value="<?php echo $hasil['nama']; ?>" >
         </div>
         <div class="form-group">
           <label>Jenis Kelamin</label>
-          <input type="text" class="form-control" name="jenis_kelamin" placeholder="Jenis Kelamin" style="width: 250px" >
+          <input type="text" class="form-control" name="jenis_kelamin" placeholder="Jenis Kelamin" value="<?php echo $hasil['jk']; ?>" >
         </div>
         <div class="form-group">
           <label>Agama</label>
-          <input type="text" class="form-control" name="agama" placeholder="Agama" style="width: 250px" >
+          <input type="text" class="form-control" name="agama" placeholder="Agama" value="<?php echo $hasil['agama']; ?>" >
         </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-md-4">
+          <div class="form-group">
+          <label>Alamat</label>
+          <textarea name="alamat" rows="4" class="form-control" ><?php echo $hasil['alamat']; ?></textarea>
+        </div>
           <div class="form-group">
           <label>Nomer Handphone</label>
-          <input type="text" class="form-control" name="no_hp" placeholder="Nomer Handphone" style="width: 250px" >
-        </div>
-        <div class="form-group">
-          <label>Kelas</label>
-          <select class="form-control" name="kelas" style="width: 250px">
-            <?php
-                include "../include/koneksi.php";
-
-                $sql = mysqli_query($conn, "SELECT * FROM kelas ORDER BY nama_kelas");
-                while ($hasil = mysqli_fetch_array($sql)) {
-             ?>
-            <option value="<?php echo $hasil['id_kelas']; ?>"><?php echo $hasil['nama_kelas']; ?></option>
-          <?php } ?>
-          </select>
+          <input type="text" class="form-control" name="no_hp" placeholder="Nomer Handphone" value="<?php echo $hasil['no_hp']; ?>" >
         </div>
         <div class="form-group">
           <label>Username</label>
-          <input type="text" class="form-control" name="username" placeholder="Username" style="width: 250px" >
+          <input type="text" class="form-control" name="username" placeholder="Username" value="<?php echo $hasil['username']; ?>" >
         </div>
-        <div class="form-group">
-          <label>Password</label>
-          <input type="password" class="form-control" name="password" placeholder="password" style="width: 250px" >
-        </div>    
         </div>
-        <div class="col-sm-3">
+        <div class="col-md-4">
           <div class="form-group">
-          <label>Alamat</label>
-          <textarea name="alamat" rows="3" class="form-control" style="width: 250px"></textarea>
+            <label>Password</label>
+            <input type="password" class="form-control" name="password" placeholder="password" value="<?php echo $hasil['password']; ?>" >
+          </div>
+
+          <div class="form-group">
+            <label>Kelas</label>
+            <select class="form-control" name="kelas" >
+              <?php
+                  include "../include/koneksi.php";
+
+                  $sql = mysqli_query($conn, "SELECT * FROM kelas ORDER BY nama_kelas");
+                  while ($hasil = mysqli_fetch_array($sql)) {
+               ?>
+              <option value="<?php echo $hasil['id_kelas']; ?>"><?php echo $hasil['nama_kelas']; ?></option>
+            <?php } ?>
+            </select>
+          </div>
+
           <br>
           <input type="submit" name="submit" value="Simpan" class="btn btn-success">
-      <a href="data_siswa.php"><input type="button" class="btn btn-default" value="Batal" ></a>
+          <a href="data_siswa.php"><input type="button" class="btn btn-default" value="Batal" ></a>
         </div>
         </div>
     </div>
       </form>
+    <?php } ?>
       <br>
 </div>
         </div>
-      </div>  
+      </div>
     </div>
   </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

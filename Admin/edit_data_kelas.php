@@ -88,7 +88,7 @@
   <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
-      
+
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
@@ -99,25 +99,33 @@
     <h3>EDIT DATA KELAS</h3>
     <hr>
       <br>
-  <form action="proses-edit-mapel.php" method="POST" >
+      <?php
+          include "../include/koneksi.php";
+          $id_kelas = $_GET['edit'];
+          $sql = mysqli_query($conn, "SELECT * FROM kelas WHERE id_kelas='".$id_kelas."'");
+          while ($hasil = mysqli_fetch_array($sql)) {
+       ?>
+  <form action="proses-edit-kelas.php" method="POST" >
     <div class="row">
         <div class="col-sm-3">
-          
         <div class="form-group">
           <label>Nama Kelas</label>
-          <input type="text" class="form-control" name="nama_kelas" placeholder="Nama Kelas" style="width: 250px" >
+
+          <input type="hidden" class="form-control" name="id_kelas"  value="<?php echo $hasil['id_kelas']; ?>">
+          <input type="text" class="form-control" name="nama_kelas" placeholder="Nama Kelas" style="width: 250px" value="<?php echo $hasil['nama_kelas']; ?>">
           <br>
           <input type="submit" name="submit" value="Simpan" class="btn btn-success">
           <a href="data_kelas.php"><input type="button" class="btn btn-default" value="Batal" ></a>
         </div>
-        
+
         </div>
     </div>
       </form>
+    <?php } ?>
       <br>
 </div>
         </div>
-      </div>  
+      </div>
     </div>
   </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

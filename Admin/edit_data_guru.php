@@ -88,7 +88,7 @@
   <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
-      
+
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
@@ -99,34 +99,40 @@
     <h3>EDIT DATA GURU</h3>
     <hr>
       <br>
-  <form action="proses-tambah-guru.php" method="POST" >
+      <?php
+          include "../include/koneksi.php";
+          $nip = $_GET['edit'];
+          $sql = mysqli_query($conn, "SELECT * FROM guru WHERE nip='".$nip."'");
+          while ($hasil = mysqli_fetch_array($sql)) {
+       ?>
+  <form action="proses-edit-guru.php" method="POST" >
     <div class="row">
       <div class="col-sm-4">
         <div class="form-group">
           <label>NIP Guru</label>
-          <input type="text" class="form-control" name="nip" placeholder="NIP Guru" style="width: 250px" >
+          <input type="text" class="form-control" name="nip" placeholder="NIP Guru" style="width: 250px" value="<?php echo $hasil['nip']; ?>" readonly>
         </div>
         <div class="form-group">
           <label>Nama Guru</label>
-          <input type="text" class="form-control" name="nama_guru" placeholder="Nama Guru" style="width: 250px" >
+          <input type="text" class="form-control" name="nama_guru" placeholder="Nama Guru" style="width: 250px" value="<?php echo $hasil['nama']; ?>">
         </div>
         <div class="form-group">
           <label>Alamat</label>
-          <textarea name="alamat" rows="3" class="form-control" style="width: 250px"></textarea>
+          <textarea name="alamat" rows="3" class="form-control" style="width: 250px"><?php echo $hasil['alamat']; ?></textarea>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="form-group">
           <label>Nomer Handphone</label>
-          <input type="text" class="form-control" name="no_hp" placeholder="Nomer Handphone" style="width: 250px" >
+          <input type="text" class="form-control" name="no_hp" placeholder="Nomer Handphone" value="<?php echo $hasil['no_hp']; ?>">
         </div>
         <div class="form-group">
           <label>Username</label>
-          <input type="text" class="form-control" name="username" placeholder="Username" style="width: 250px" >
+          <input type="text" class="form-control" name="username" placeholder="Username" value="<?php echo $hasil['username']; ?>" >
         </div>
         <div class="form-group">
           <label>Password</label>
-          <input type="password" class="form-control" name="password" placeholder="password" style="width: 250px" >
+          <input type="password" class="form-control" name="password" placeholder="password" value="<?php echo $hasil['password']; ?>" >
         </div>
 
       </div>
@@ -134,10 +140,11 @@
       <input type="submit" name="submit" value="Simpan" class="btn btn-success">
       <a href="data_guru.php"><input type="button" class="btn btn-default" value="Batal" ></a>
       </form>
+    <?php } ?>
       <br>
 </div>
         </div>
-      </div>  
+      </div>
     </div>
   </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

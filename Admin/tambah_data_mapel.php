@@ -88,7 +88,7 @@
   <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
-      
+
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
@@ -102,22 +102,22 @@
   <form action="proses-tambah-mapel.php" method="POST" >
     <div class="row">
         <div class="col-sm-3">
-          
+
         <div class="form-group">
           <label>Nama Mata Pelajaran</label>
-          <input type="text" class="form-control" name="nama_siswa" placeholder="Nama Mata Pelajaran" style="width: 250px" >
+          <input type="text" class="form-control" name="mapel" placeholder="Nama Mata Pelajaran" style="width: 250px" >
           <br>
           <input type="submit" name="submit" value="Simpan" class="btn btn-success">
           <a href="data_mata_pelajaran.php"><input type="button" class="btn btn-default" value="Batal" ></a>
         </div>
-        
+
         </div>
     </div>
       </form>
       <br>
 </div>
         </div>
-      </div>  
+      </div>
     </div>
   </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
