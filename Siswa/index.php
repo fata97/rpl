@@ -34,27 +34,15 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="data_siswa.php">
+          <a class="nav-link" href="data_absensi.php">
             <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">Data Siswa</span>
+            <span class="nav-link-text">Input Absensi Siswa</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="data_guru.php">
-            <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">Data Guru</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="data_kelas.php">
+          <a class="nav-link" href="tampil_data_absensi.php">
             <i class="fa fa-fw fa-sitemap"></i>
-            <span class="nav-link-text">Data Kelas</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="data_mata_pelajaran.php">
-            <i class="fa fa-fw fa-sitemap"></i>
-            <span class="nav-link-text">Data Mata Pelajaran</span>
+            <span class="nav-link-text">Tampil Data Absensi</span>
           </a>
         </li>
         </li>
@@ -96,72 +84,7 @@
         <li class="breadcrumb-item active">My Dashboard</li>
       </ol>
       <!-- Icon Cards-->
-      <div class="row">
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-comments"></i>
-              </div>
-              <div class="mr-5">Data Siswa</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="data_siswa.php">
-              <span class="float-left">View Details</span>
-              <span class="float-right">
-                <i class="fa fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-warning o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-list"></i>
-              </div>
-              <div class="mr-5">Data Guru</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="data_guru.php">
-              <span class="float-left">View Details</span>
-              <span class="float-right">
-                <i class="fa fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-success o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-shopping-cart"></i>
-              </div>
-              <div class="mr-5">Data Kelas</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="data_kelas.php">
-              <span class="float-left">View Details</span>
-              <span class="float-right">
-                <i class="fa fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-danger o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-support"></i>
-              </div>
-              <div class="mr-5">Data Mata Pelajaran</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="data_mata_pelajaran.php">
-              <span class="float-left">View Details</span>
-              <span class="float-right">
-                <i class="fa fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
+      
       <!-- Area Chart Example-->
       
     <!-- /.container-fluid-->

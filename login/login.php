@@ -15,7 +15,7 @@
 		
 		
 		<form class="form">
-			<h1>Welcome</h1>
+			<h1>SELAMAT DATANG ADMIN</h1>
 			<input type="text" placeholder="Username">
 			<input type="password" placeholder="Password">
 			<button type="submit" id="login-button">Login</button>

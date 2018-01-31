@@ -33,27 +33,15 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="data_siswa.php">
+          <a class="nav-link" href="data_absensi.php">
             <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">Data Siswa</span>
+            <span class="nav-link-text">Input Absensi Siswa</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="data_guru.php">
-            <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">Data Guru</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="data_kelas.php">
+          <a class="nav-link" href="tampil_data_absensi.php">
             <i class="fa fa-fw fa-sitemap"></i>
-            <span class="nav-link-text">Data Kelas</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="data_mata_pelajaran.php">
-            <i class="fa fa-fw fa-sitemap"></i>
-            <span class="nav-link-text">Data Mata Pelajaran</span>
+            <span class="nav-link-text">Tampil Data Absensi</span>
           </a>
         </li>
         </li>
@@ -92,12 +80,11 @@
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Data Mata Kelas</div>
+          <i class="fa fa-table"></i> Data Absensi</div>
         </div>
         <div class="container">
           <?php  
-
-              require_once "../table_kelas.php";
+              require_once "../table_absensi.php";
           ?>
         </div>
       </div>  

@@ -30,8 +30,20 @@
 	<h1>ABSENSI SISWA</h1>
 	<br>
 	<div class="box">
+		<div class="form-group">
+          Pilih Kelas
+          <select class="form-control" name="kelas" style="width: 250px">
+            <?php
+                include "../include/koneksi.php";
 
-<div class="table-responsive">
+                $sql = mysqli_query($conn, "SELECT * FROM kelas ORDER BY nama_kelas");
+                while ($hasil = mysqli_fetch_array($sql)) {
+             ?>
+            <option value="<?php echo $hasil['id_kelas']; ?>"><?php echo $hasil['nama_kelas']; ?></option>
+          <?php } ?>
+          </select>
+        </div>	
+	<div class="table-responsive">
 
 	<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>

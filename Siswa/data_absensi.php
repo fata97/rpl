@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>SB Admin - Start Bootstrap Template</title>
+  <title>Welcome Admin</title>
   <!-- Bootstrap core CSS-->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
@@ -33,27 +33,15 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="data_siswa.php">
+          <a class="nav-link" href="data_absensi.php">
             <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">Data Siswa</span>
+            <span class="nav-link-text">Input Absensi Siswa</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="data_guru.php">
-            <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">Data Guru</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="data_kelas.php">
+          <a class="nav-link" href="tampil_data_absensi.php">
             <i class="fa fa-fw fa-sitemap"></i>
-            <span class="nav-link-text">Data Kelas</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="data_mata_pelajaran.php">
-            <i class="fa fa-fw fa-sitemap"></i>
-            <span class="nav-link-text">Data Mata Pelajaran</span>
+            <span class="nav-link-text">Tampil Data Absensi</span>
           </a>
         </li>
         </li>
@@ -92,30 +80,12 @@
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Tambah Data Mata Pelajaran</div>
+          <i class="fa fa-table"></i> Data Absensi</div>
         </div>
         <div class="container">
-            <div class="container">
-    <h3>TAMBAH DATA MATA PELAJARAN</h3>
-    <hr>
-      <br>
-  <form action="proses-tambah-mapel.php" method="POST" >
-    <div class="row">
-        <div class="col-sm-3">
-          
-        <div class="form-group">
-          <label>Nama Mata Pelajaran</label>
-          <input type="text" class="form-control" name="nama_siswa" placeholder="Nama Mata Pelajaran" style="width: 250px" >
-          <br>
-          <input type="submit" name="submit" value="Simpan" class="btn btn-success">
-          <a href="data_mata_pelajaran.php"><input type="button" class="btn btn-default" value="Batal" ></a>
-        </div>
-        
-        </div>
-    </div>
-      </form>
-      <br>
-</div>
+          <?php  
+              require_once "../table_absensi.php";
+          ?>
         </div>
       </div>  
     </div>
