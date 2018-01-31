@@ -39,6 +39,7 @@
 				<th>NO</th>
                 <th>NAMA</th>
                 <th>ABSENSI</th>
+                <th>WAKTU SEKARANG</th>
 				<th>AKSI</th>
 
             </tr>
@@ -60,6 +61,7 @@
   					<span class="checkmark">Alfa</span>
 					
 				</td>
+				<td></td>
 				<td style="text-align: center;"><a href="edit_data_guru.php?edit=<?php echo $hasil['nip']; ?>" class="btn btn-success">Konfirmasi</a>
 			</tr>	
         </tbody>
