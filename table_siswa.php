@@ -6,9 +6,30 @@
         .tombol{
             margin-bottom: 20px;
         }
+
+        h1{
+        	text-align: center;
+        }
+
+        .box {
+        	border-style: outset;
+        	padding: 25px;
+        	border-radius: 40px 40px 40px 40px;
+        }
+
+        .btn-danger{
+        	padding: 5px;
+        }
+
+        .btn-warning{
+        	padding: 5px;
+        }
     </style>
 </head>
 <body>
+	<h1>DATA SISWA</h1>
+	<br>
+	<div class="box">
     <div class="tombol" >
         <a href="tambah_data_siswa.php"><button type="button" class="btn btn-success btn-md " >Tambah Data </button></a>
     </div>
@@ -55,6 +76,7 @@
 			    ?>
         </tbody>
     </table>
+    </div>
 	</div>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
