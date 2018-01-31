@@ -16,6 +16,15 @@
   <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
+  <style type="text/css">
+    .jumbotron{
+      background-color: #90caf9;
+    }
+
+    .judul {
+      padding: 50px 0;
+    }
+  </style>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -27,6 +36,18 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" style="padding: 20px;">
+          <a href=class="nav-link" href="index.php">
+          <center>
+          <div class="avatar"><img src="https://66.media.tumblr.com/avatar_faa95867d2b3_128.png" width="100px" height="100px" />
+          </div>
+          <div style="color: white; font-weight: bold;">
+            nama : 
+          </div>
+          </center>
+          </a>
+
+        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="index.php">
             <i class="fa fa-fw fa-dashboard"></i>
@@ -68,7 +89,7 @@
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a  class="nav-link" data-toggle="modal" data-target="#exampleModal">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>Logout</a>
         </li>
       </ul>
@@ -77,12 +98,15 @@
   <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="#">Dashboard</a>
-        </li>
-        <li class="breadcrumb-item active">My Dashboard</li>
-      </ol>
+      <div class="">
+        <div class="jumbotron">
+          <div class="judul">
+          <h1 style="text-align: center; padding-bottom: 20px; color: white; font-weight: bold; font-family: sans-serif;">SELAMAT DATANG ADMIN</h1> 
+          <p style="text-align: center; font-family: sans-serif; font-weight: bold;">Silahkan pilih menu sesuai yang diinginkan</p> 
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
       <!-- Icon Cards-->
       <div class="row">
         <div class="col-xl-3 col-sm-6 mb-3">
@@ -151,7 +175,7 @@
         </div>
       </div>
       <!-- Area Chart Example-->
-
+      
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
     <footer class="sticky-footer">
@@ -178,7 +202,7 @@
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="../logout.php">Logout</a>
+            <a class="btn btn-primary" href="login.html">Logout</a>
           </div>
         </div>
       </div>

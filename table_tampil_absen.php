@@ -27,7 +27,7 @@
     </style>
 </head>
 <body>
-	<h1>ABSENSI SISWA</h1>
+	<h1>TAMPIL DATA ABSENSI SISWA</h1>
 	<br>
 	<div class="box">
 		<div class="form-group">
@@ -48,7 +48,7 @@
 	<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
             <tr>
-				        <th>No</th>
+				<th>No</th>
                 <th>Mapel</th>
                 <th>Nama Guru</th>
                 <th>Hadir</th>

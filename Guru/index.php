@@ -16,6 +16,13 @@
   <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
+  <style type="text/css">
+    .jumbotron{
+      padding-top: 20%;
+      padding-bottom: 15%;
+      background-color: #ff8000;
+    }
+  </style>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -27,6 +34,16 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li style="padding: 20px;">
+          <center>
+          <div class="avatar"><img src="https://66.media.tumblr.com/avatar_faa95867d2b3_128.png" width="100px" height="100px" />
+          </div>
+          <div style="color: white; font-weight: bold;">
+            nama : 
+          </div>
+          </center>
+
+        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="index.php">
             <i class="fa fa-fw fa-dashboard"></i>
@@ -56,18 +73,6 @@
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <form class="form-inline my-2 my-lg-0 mr-lg-2">
-            <div class="input-group">
-              <input class="form-control" type="text" placeholder="Search for...">
-              <span class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                  <i class="fa fa-search"></i>
-                </button>
-              </span>
-            </div>
-          </form>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>Logout</a>
         </li>
@@ -76,19 +81,15 @@
   </nav>
   <div class="content-wrapper">
     <div class="container-fluid">
-      <!-- Breadcrumbs-->
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="#">Dashboard</a>
-        </li>
-        <li class="breadcrumb-item active">My Dashboard</li>
-      </ol>
-      <!-- Icon Cards-->
-
-      <!-- Area Chart Example-->
-
-    <!-- /.container-fluid-->
-    <!-- /.content-wrapper-->
+      
+      <div class="">
+        <div class="jumbotron">
+          <h1 style="text-align: center; padding-bottom: 20px; color: white;">SELAMAT DATANG GURU</h1> 
+          <p style="text-align: center; font-weight: bold;">Silahkan pilih menu sesuai yang diinginkan</p> 
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </div>
+      </div>
+      
     <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
@@ -113,7 +114,7 @@
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="../logout.php">Logout</a>
+            <a class="btn btn-primary" href="login.html">Logout</a>
           </div>
         </div>
       </div>

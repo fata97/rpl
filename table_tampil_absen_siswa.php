@@ -27,32 +27,24 @@
     </style>
 </head>
 <body>
-	<h1>ABSENSI SISWA</h1>
+	<h1>TAMPIL DATA ABSENSI SISWA</h1>
 	<br>
 	<div class="box">
 		<div class="form-group">
-          Pilih Kelas
-          <select class="form-control" name="kelas" style="width: 250px">
-            <?php
-                include "../include/koneksi.php";
-
-                $sql = mysqli_query($conn, "SELECT * FROM kelas ORDER BY nama_kelas");
-                while ($hasil = mysqli_fetch_array($sql)) {
-             ?>
-            <option value="<?php echo $hasil['id_kelas']; ?>"><?php echo $hasil['nama_kelas']; ?></option>
-          <?php } ?>
-          </select>
+          <label>Nama anda : </label>
         </div>	
 	<div class="table-responsive">
 
 	<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
             <tr>
-				<th>NO</th>
-                <th>NAMA</th>
-                <th>ABSENSI</th>
-                <th>WAKTU SEKARANG</th>
-				<th>AKSI</th>
+				<th>No</th>
+                <th>Mapel</th>
+                <th>Nama Guru</th>
+                <th>Hadir</th>
+                <th>Sakit</th>
+                <th>Izin</th>
+                <th>Alfa</th>
 
             </tr>
         </thead>
@@ -60,24 +52,11 @@
 			<tr>
 				<td></td>
 				<td></td>
-				<td>
-  					<input type="radio" checked="checked" name="radio">
-  					<span class="checkmark">Hadir</span>
-					
-					
-  					<input type="radio" checked="checked" name="radio">
-  					<span class="checkmark">Sakit</span>
-
-            <input type="radio" checked="checked" name="radio">
-            <span class="checkmark">Izin</span>
-					
-					
-  					<input type="radio" checked="checked" name="radio">
-  					<span class="checkmark">Alfa</span>
-					
-				</td>
 				<td></td>
-				<td style="text-align: center;"><a href="edit_data_guru.php?edit=<?php echo $hasil['nip']; ?>" class="btn btn-success">Konfirmasi</a>
+				<td></td>
+        <td></td>
+        <td></td>
+        <td></td>
 			</tr>	
         </tbody>
     </table>
