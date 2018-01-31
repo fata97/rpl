@@ -80,11 +80,11 @@
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Data Absensi</div>
+          <i class="fa fa-table"></i>Tampil Data Absensi</div>
         </div>
         <div class="container">
           <?php  
-              require_once "../table_absensi.php";
+              require_once "../table_tampil_absen.php";
           ?>
         </div>
       </div>  
