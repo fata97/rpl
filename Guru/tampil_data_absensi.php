@@ -26,6 +26,17 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" style="padding: 20px;">
+          <a href=class="nav-link" href="index.php">
+          <center>
+          <div class="avatar"><img src="https://66.media.tumblr.com/avatar_faa95867d2b3_128.png" width="100px" height="100px" />
+          </div>
+          <div style="color: white; font-weight: bold;">
+            nama : 
+          </div>
+          </center>
+          </a>
+        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="index.php">
             <i class="fa fa-fw fa-dashboard"></i>

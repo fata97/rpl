@@ -1,300 +1,316 @@
-<!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Studen Acces Online</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes" name="viewport">
-  <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic">
+    <meta charset="UTF-8">
 
-  <!-- Morris chart -->
-  <style>
-      #gambar{
-    border-radius:100em;
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nova Theme</title>
+    <meta name="Nova theme" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png"/>
 
-    border:3px solid #ddd;
-    width:100px;
-    height:100px;
-    }
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    .kiri{
-      font-weight: bold;
-    }
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/responsive.css"/>
 
-    .kanan{
-      text-align: right;
-      float: right;
-      }
-      ul{
-        display: block;
-        list-style-type: disc;
-      }
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
-    .box1{
-      overflow: auto;
-    }
-
-    @media only screen and (min-width:1024px) {
-        .prod-info-main div[class*=col-md-4] {
-            padding-right: 0
-        }
-        .prod-info-main div[class*=col-md-8] {
-            padding: 0 13px 0 0
-        }
-        .prod-wrap div[class*=col-md-5] {
-            padding-right: 0
-        }
-        .prod-wrap div[class*=col-md-7] {
-            padding: 0 13px 0 0
-        }
-        .prod-info-main .product-image {
-            border-right: 1px solid #dfe5e9
-        }
-        .prod-info-main .product-info {
-            position: relative
-        }
-    }
-
-  </style>
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
 
-  <header class="main-header">
-    <!-- Logo -->
+<body>
 
-  <!-- Logo -->
-  <a href="#" class="logo" >
-    <span class="logo-lg" >Siswa</span>
-  </a>
-
-  <nav class="navbar navbar-static-top">
-    <!-- Sidebar toggle button-->
-    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-      <span class="sr-only">Toggle navigation</span>
-    </a>
-
-    <div class="navbar-custom-menu">
-      <ul class="nav navbar-nav">
-        <!-- Messages: style can be found in dropdown.less-->
-        <li class="dropdown messages-menu">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <i class="fa fa-envelope-o"></i>
-            <span class="label label-success">4</span>
-          </a>
-
-        <li class="dropdown user user-menu">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-            <span class="hidden-xs">Alexander Pierce</span>
-          </a>
-          <ul class="dropdown-menu">
-            <!-- User image -->
-            <li class="user-header">
-              <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
-              <p>
-                Alexander Pierce - Web Developer
-                <small>Member since Nov. 2012</small>
-              </p>
-            </li>
-            <!-- Menu Body -->
-            <li class="user-body">
-              <div class="row">
-                <div class="col-xs-4 text-center">
-                  <a href="#">Followers</a>
-                </div>
-                <div class="col-xs-4 text-center">
-                  <a href="#">Sales</a>
-                </div>
-                <div class="col-xs-4 text-center">
-                  <a href="#">Friends</a>
-                </div>
-              </div>
-              <!-- /.row -->
-            </li>
-            <!-- Menu Footer-->
-            <li class="user-footer">
-              <div class="pull-left">
-                <a href="#" class="btn btn-default btn-flat">Profile</a>
-              </div>
-              <div class="pull-right">
-                <a href="#" class="btn btn-default btn-flat">Log out</a>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <!-- Control Sidebar Toggle Button -->
-
-      </ul>
+<!-- Navigation
+    ================================================== -->
+<div class="hero-background">
+    <div>
+        <img class="strips" src="assets/images/strips.png">
     </div>
-  </nav>
-
-  </header>
-
-  <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar" style="background-color:#f9fafc">
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-      <!-- Sidebar user panel -->
-      <ul class="sidebar-menu"  data-widget="tree" style="background-color:#f9fafc">
-        <li><a href="#" style="color:black"><i class="fa fa-dashboard"></i><span >Beranda</span></a></li>
-        <li ><a href="#" style="color:black"><i class="fa fa-child"></i><span style="color:black">Data Skill</span></a></li>
-    </ul>
-
-        <!-- sidebar menu: : style can be found in sidebar.less -->
-    </section>
-    <!-- /.sidebar -->
-  </aside>
+    <div class="container">
+        <div class="header-container header">
+            <a href="#email-form">
+                <button class="header-btn"> LOGIN </button>
+            </a>
+            <div class="header-right">
+                <a class="navbar-item" href="#team">The Team</a>
+                <a class="navbar-item" href="#features">Features</a>
+            </div>
+        </div>
+        <!--navigation-->
 
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header" style="margin-left:20px;" >
-      <h1>
-        Data Skill
-      </h1>
-      <br>
-    </section>
+        <!-- Hero-Section
+          ================================================== -->
 
-    <!-- Main content -->
-      <section class="content container-fluid">
-        <div class="prod-info-main prod-wrap clearfix">
+        <div class="hero row">
+            <div class="hero-right col-sm-6 col-sm-6">
+                <h1 class="header-headline bold"> Sistem Informasi Absensi <br></h1>
+                <h4 class="header-running-text light"> Kemudahan dalam melakukan absensi di sekolah</h4>
+                <a href="#">
+                    <button class="hero-btn"> MULAI </button>
+                </a>
+            </div><!--hero-left-->
 
-        <div class="box box-info col-md-4 col-sm-4 col-xs-12" style="width:335px; height:420px; margin-left:20px; margin-right:55px;
-        padding-top: 10px;padding-right:10px;padding-bottom: 10px;padding-left: 10px;">
-          <center>
-            <img id="gambar" src="doraemon.jpg" alt="" style="">
-            <h4 style="font-family: “Duru Sans”, Verdana, sans-serif;">Fata Hasan</h4>
-            <h5 style="font-weight:normal; font-family: Courier, monospace;">XI IPA</h5>
-          </center>
-            <ul class="list-group list-group-unbordered">
-              <li class="list-group-item"><b>Jenis Kelamin</b>
-                  <a href="#" style="float:right">Laki-Laki</a>
-              </li>
-              <li class="list-group-item"><b>Agama</b>
-                  <a href="#" style="float:right">Islam</a>
-              </li>
-              <li class="list-group-item"><b>Tempat & Tanggal Lahir</b>
-                  <a href="#" style="float:right">Bandung, 20 Maret 1997</a>
-              </li>
-              <li class="list-group-item"><b>Alamat</b>
-                  <a href="#" style="float:right">Bandung</a>
-              </li>
-              <li class="list-group-item"><b>No. Telp</b>
-                  <a href="#" style="float:right">087822555784</a>
-              </li>
-              <li class="list-group-item"><b>Nama Ayah</b>
-                  <a href="#" style="float:right">Ehram</a>
-              </li>
-            </ul>
+            <div class="col-sm-6 col-sm-6 ipad">
+                <img style="padding-top: 30px; " class="ipad-screen img-responsive" src="assets/images/screen.png"/>
+            </div>
 
+            <div><img class="mouse" src="assets/images/mouse.svg"/></div>
+
+        </div><!--hero-->
+
+    </div> <!--hero-container-->
+
+</div><!--hero-background-->
+
+
+<!-- Features
+  ================================================== -->
+
+<div id="features" class="features-section">
+
+    <div class="features-container row">
+
+        <h2 class="features-headline light">FEATURES</h2>
+
+        <div class="col-sm-4 feature">
+
+            <div class="feature-icon feature-no-display">
+                <img class="feature-img" src="assets/images/responsive.svg">
+            </div>
+            <h5 class="feature-head-text feature-no-display"> ADMIN </h5>
+            <p class="feature-subtext light feature-no-display"> Dapat melakukan Input data guru , siswa, kelas, dan Mata Pelajaran</p>
         </div>
 
-      <div class="box box-info col-md-8 col-sm-8 col-xs-12" style=" display: block; width:550px; height:420px; padding-top: 0px;padding-right:
-       50px;padding-bottom: 30px;padding-left: 5px; position: overflow: hidden;relative;  ">
-        <center><h3 style="margin-left:60px;">Skill Karakter</h3>
-        <canvas id="marksChart" height="8" width="10"></canvas>
+        <div class="col-sm-4 feature">
+            <div class="feature-icon feature-no-display feature-display-mid">
+                <img class="feature-img" src="assets/images/customizable.svg">
+            </div>
+            <h5 class="feature-head-text feature-no-display feature-display-mid"> GURU </h5>
+            <p class="feature-subtext light feature-no-display feature-display-mid"> Dapat melakukan Input data absensi dan tampil data absensi</p>
+        </div>
 
-      </div>
+        <div class="col-sm-4 feature">
+            <div class="feature-icon feature-no-display feature-display-last">
+                <img class="bullet-img" src="assets/images/design.svg">
+            </div>
+            <h5 class="feature-head-text feature-no-display feature-display-last"> SISWA </h5>
+            <p class="feature-subtext light feature-no-display feature-display-last"> Hanya menampilkan data absensi siswa.</p>
+        </div>
+    </div> <!--features-container-->
+</div> <!--features-section-->
+
+
+
+<!-- White-Section
+  ================================================== -->
+
+<div class="white-section row">
+
+
+    <div class="col-sm-6">
+        <img class="imac-screen img-responsive" src="assets/images/product-screen-1.png">
     </div>
-    <!-- /.content -->
+
+
+    <div class="col-sm-6">
+
+        <div class="white-section-text">
+
+            <h2 class="imac-section-header light">DASHBOARD ADMIN</h2>
+
+            <div class="imac-section-desc">
+
+            <span>Menu </span>
+            <ol>
+                <li>Input Data Siswa</li>
+                <li>Input Data Guru</li>
+                <li>Input Data Kelas</li>
+                <li>Input Data Mata Pelajaran</li>
+            </ol>
+            </div>
+        </div>
     </div>
-  <!-- /.content-wrapper -->
+</div><!--white-section-text-section--->
 
-  <footer class="main-footer">
-    <strong>Student Acces Online &copy; 2018
-  </footer>
+<!-- White-Section
+  ================================================== -->
+
+<div class="white-section row">
+
+    <div class="col-sm-6">
+
+        <div class="white-section-text">
+
+            <h2 class="imac-section-header light">DASHBOARD SISWA</h2>
+
+            <div class="imac-section-desc">
+
+            <span>Menu </span>
+            <ol>
+                <li>Tampil Data Absensi</li>
+            </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <img class="imac-screen img-responsive" src="assets/images/product-screen-2.png">
+    </div>
 
 
-<!-- jQuery 3 -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button);
-</script>
-<!-- Bootstrap 3.3.7 -->
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- Bootstrap WYSIHTML5 -->
-<script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-<!-- Slimscroll -->
-<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="bower_components/fastclick/lib/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="dist/js/pages/dashboard.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
-<script src="chartjs/Chart.bundle.js"></script>
-<script type="text/javascript">
-    var marksCanvas = document.getElementById("marksChart");
+    
+</div><!--white-section-text-section--->
 
-    Chart.defaults.global.defaultFontFamily = "Lato";
-    Chart.defaults.global.defaultFontSize = 18;
+<!-- White-Section
+  ================================================== -->
 
-    var marksData = {
-    labels: ["Intelegence", "Constituion", "Strength", "Charisma", "Dexterity", "Wisdom"],
-    datasets: [{
-    label: "Fata Hasan",
-    backgroundColor: "transparent",
-    borderColor: "rgba(200,0,0,0.6)",
-    fill: false,
-    radius: 1,
-    pointRadius: 1,
-    pointBorderWidth: 1,
-    pointBackgroundColor: "orange",
-    pointBorderColor: "rgba(200,0,0,0.6)",
-    pointHoverRadius: 1,
-    data: [5, 4, 4, 3, 5, 2]
-    }]
-    };
+<div class="white-section row">
 
-    var chartOptions = {
-    scale: {
-    ticks: {
-      beginAtZero: true,
-      min: 0,
-      max: 5,
-      stepSize: 1
-    },
-    pointLabels: {
-      fontSize: 12
-    }
-    },
-    legend: {
-    position: 'left'
-    }
-    };
 
-    var radarChart = new Chart(marksCanvas, {
-    type: 'radar',
-    data: marksData,
-    options: chartOptions
-    });
-</script>
+    <div class="col-sm-6">
+        <img class="imac-screen img-responsive" src="assets/images/product-screen-3.png">
+    </div>
 
+
+    <div class="col-sm-6">
+
+        <div class="white-section-text">
+
+            <h2 class="imac-section-header light">DASHBOARD GURU</h2>
+
+            <div class="imac-section-desc">
+
+            <span>Menu </span>
+            <ol>
+                <li>Input Absen Siswa</li>
+                <li>Tampil data absensi siswa</li>
+            </ol>
+            </div>
+        </div>
+    </div>
+</div><!--white-section-text-section--->
+
+
+<!-- Team
+  ================================================== -->
+
+<div id="team" class="team pricing-background">
+    <h2 class="team-section-header light text-center">THE TEAM</h2>
+
+    <div class="team-container row">
+
+
+        <div class="col-sm-4 team-member">
+            <img src="assets/images/cto.png">
+            <div class="team-member-text">
+                <h4 class="team-member-position light">BACKEND DEV</h4>
+                <h5 class="bold">Fata Hasan</h5>
+                <a href="http://www.twitter.com"><img class="team-social-icon" src="assets/images/team-twitter.svg"></a>
+                <a href="http://www.facebook.com"><img class="team-social-icon"
+                                                       src="assets/images/team-facebook.svg"></a>
+                <a href="https://plus.google.com/"><img class="team-social-icon"
+                                                        src="assets/images/team-google.svg"></a>
+            </div>
+        </div>
+
+        <div class="col-sm-4 team-member">
+            <img src="assets/images/ceo.png">
+            <div class="team-member-text">
+                <h4 class="team-member-position light">FRONTEND DEV</h4>
+                <h5 class="bold">Barrur Rhozi</h5>
+                <a href="http://www.twitter.com"><img class="team-social-icon" src="assets/images/team-twitter.svg"></a>
+                <a href="http://www.facebook.com"><img class="team-social-icon"
+                                                       src="assets/images/team-facebook.svg"></a>
+                <a href="https://plus.google.com/"><img class="team-social-icon"
+                                                        src="assets/images/team-google.svg"></a>
+            </div>
+        </div>
+
+        <div class="col-sm-4 team-member">
+            <img src="assets/images/cfo.png">
+            <div class="team-member-text">
+                <h4 class="team-member-position light">UI/UX DEV</h4>
+                <h5 class="bold">Moh. Nanda Rizky</h5>
+                <a href="http://www.twitter.com"><img class="team-social-icon" src="assets/images/team-twitter.svg"></a>
+                <a href="http://www.facebook.com"><img class="team-social-icon"
+                                                       src="assets/images/team-facebook.svg"></a>
+                <a href="https://plus.google.com/"><img class="team-social-icon"
+                                                        src="assets/images/team-google.svg"></a>
+            </div>
+
+        </div>
+        <! -- .row -->
+        <div class="team-container row">
+
+
+
+        <div class="col-sm-6 team-member">
+            <img src="assets/images/ceo.png">
+            <div class="team-member-text">
+                <h4 class="team-member-position light">Support DEV</h4>
+                <h5 class="bold">Afaldi Maulana</h5>
+                <a href="http://www.twitter.com"><img class="team-social-icon" src="assets/images/team-twitter.svg"></a>
+                <a href="http://www.facebook.com"><img class="team-social-icon"
+                                                       src="assets/images/team-facebook.svg"></a>
+                <a href="https://plus.google.com/"><img class="team-social-icon"
+                                                        src="assets/images/team-google.svg"></a>
+            </div>
+        </div>
+
+        <div class="col-sm-6 team-member">
+            <img src="assets/images/cfo.png">
+            <div class="team-member-text">
+                <h4 class="team-member-position light">Support DEV</h4>
+                <h5 class="bold">Yudha</h5>
+                <a href="http://www.twitter.com"><img class="team-social-icon" src="assets/images/team-twitter.svg"></a>
+                <a href="http://www.facebook.com"><img class="team-social-icon"
+                                                       src="assets/images/team-facebook.svg"></a>
+                <a href="https://plus.google.com/"><img class="team-social-icon"
+                                                        src="assets/images/team-google.svg"></a>
+            </div>
+
+        </div>
+        <! -- .row -->
+
+    </div> <!--team-container--->
+
+</div> <!--team-section--->
+
+<!-- Email-Section
+  ================================================== -->
+
+<div class="blue-section" style="padding: 100px;">
+    
+</div>
+<!--blue-section-->
+
+<!-- Footer
+  ================================================== -->
+
+<div class="footer" style="padding: 50px;">
+
+    <div class="container">
+        <div class="row">
+
+            
+
+        </div>
+        <!--row-->
+
+    </div>
+    <!--container-->
+</div>
+<!--footer-->
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+<script src="assets/js/script.js"></script>
 
 </body>
+
 </html>

@@ -22,7 +22,7 @@
     }
 
     .judul {
-      padding: 50px 0;
+      padding: 30px 0;
     }
   </style>
 </head>
@@ -46,7 +46,6 @@
           </div>
           </center>
           </a>
-
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="index.php">

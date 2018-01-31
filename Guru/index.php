@@ -20,7 +20,7 @@
     .jumbotron{
       padding-top: 20%;
       padding-bottom: 15%;
-      background-color: #ff8000;
+      background-color: #9575cd;
     }
   </style>
 </head>
@@ -34,7 +34,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <li style="padding: 20px;">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard" style="padding: 20px;">
           <center>
           <div class="avatar"><img src="https://66.media.tumblr.com/avatar_faa95867d2b3_128.png" width="100px" height="100px" />
           </div>
@@ -44,6 +44,7 @@
           </center>
 
         </li>
+
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="index.php">
             <i class="fa fa-fw fa-dashboard"></i>
