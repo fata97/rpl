@@ -12,16 +12,16 @@
 <body>
 	<div class="wrapper">
 	<div class="container">
-		
-		
-		<form class="form">
+
+
+		<form class="form" action="../login.php" method="post">
 			<h1>SELAMAT DATANG ADMIN</h1>
-			<input type="text" placeholder="Username">
-			<input type="password" placeholder="Password">
-			<button type="submit" id="login-button">Login</button>
+			<input type="text" name="username" placeholder="Username">
+			<input type="password" name="password" placeholder="Password">
+			<button type="submit" name="submit" id="login-button">Login</button>
 		</form>
 	</div>
-	
+
 	<ul class="bg-bubbles">
 		<li></li>
 		<li></li>

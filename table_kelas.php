@@ -22,7 +22,7 @@
 <body>
 	<h1>DATA KELAS</h1>
 
-	<div class="box">	
+	<div class="box">
 	<div class="tombol" >
         <a href="tambah_data_kelas.php"><button type="button" class="btn btn-success btn-md " >Tambah Data </button></a>
     </div>
@@ -45,7 +45,7 @@
 						<td style="text-align: center;"><?php echo $i; ?></td>
 						<td><?php echo $hasil['nama_kelas']; ?></td>
 						<td style="text-align: center;"><a href="edit_data_kelas.php?edit=<?php echo $hasil['id_kelas']; ?>" class="btn btn-warning">Edit</a>
-						<a href="proses-edit-kelas.php?hapus=<?php echo $hasil['id_kelas']; ?>" class="btn btn-danger">Hapus</a></td>
+						<a href="proses-hapus-kelas.php?hapus=<?php echo $hasil['id_kelas']; ?>" class="btn btn-danger">Hapus</a></td>
 				</tr>
 				<?php
 						$i++;
@@ -53,7 +53,7 @@
 					?>
         </tbody>
     </table>
-    </div> 
+    </div>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>

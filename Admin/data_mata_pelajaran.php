@@ -88,19 +88,19 @@
   <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
-      
+
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
           <i class="fa fa-table"></i> Data Mata Pelajaran</div>
         </div>
         <div class="container">
-          <?php  
+          <?php
 
               require_once "../table_mapel.php";
           ?>
         </div>
-      </div>  
+      </div>
     </div>
   </div>
   <footer class="sticky-footer">
@@ -122,7 +122,7 @@
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
+            <a class="btn btn-primary" href="../logout.php">Logout</a>
           </div>
         </div>
       </div>
