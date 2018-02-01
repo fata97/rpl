@@ -15,7 +15,7 @@
 
 
 		<form class="form" action="../login.php" method="post">
-			<h1>SELAMAT DATANG ADMIN</h1>
+			<h1>SELAMAT DATANG </h1>
 			<input type="text" name="username" placeholder="Username">
 			<input type="password" name="password" placeholder="Password">
 			<button type="submit" name="submit" id="login-button">Login</button>
