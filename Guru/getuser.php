@@ -45,17 +45,17 @@ th {text-align: left;}
       echo "<td>" . $row['nama'] . "</td>";
       echo "<td>" . $tgl . "</td>";
       echo "<td>
-      <input type='radio' name='kehadiran' id='kehadiran' value='hadir' checked>
+      <input type='checkbox' name='hadir[]' id='kehadiran' value='1' checked>
   					<span class='checkmark'>Hadir</span>
-            <input type='radio' name='kehadiran' id='kehadiran' value='sakit' >
+            <input type='checkbox' name='sakit[]' id='kehadiran' value='1' >
         		<span class='checkmark'>Sakit</span>
-            <input type='radio' name='kehadiran' id='kehadiran' value='izin' >
+            <input type='checkbox' name='izin[]' id='kehadiran' value='1' >
   					<span class='checkmark'>Izin</span>
-            <input type='radio' name='kehadiran' id='kehadiran' value='alfa' >
+            <input type='checkbox' name='alfa[]' id='kehadiran' value='1' >
   					<span class='checkmark'>Alfa</span>
-            <input type='hidden' name='tanggal' value='". $tgl ."' >
-          	<input type='hidden' name='nis' value='". $row['nis'] ."' >
-          	<input type='hidden' name='id_mapel' value='". $mapel ."' ></td>";
+            <input type='hidden' name='tanggal[]' value='". $tgl ."' >
+          	<input type='hidden' name='nis[]' value='". $row['nis'] ."' >
+          	<input type='hidden' name='id_mapel[]' value='". $mapel ."' ></td>";
       echo "</tr></tbody>";
       $i++;
       }

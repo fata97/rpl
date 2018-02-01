@@ -81,7 +81,6 @@
         </tbody>
     </table>
 	</div>
-
 	<input id='tombol' type='submit' name='submit' value='Konfirmasi' class='btn btn-success'></form>
 
 	</div>
