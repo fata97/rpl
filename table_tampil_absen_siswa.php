@@ -31,8 +31,16 @@
 	<br>
 	<div class="box">
 		<div class="form-group">
-          <label>Nama anda : </label>
-        </div>	
+			<?php
+					include "../include/koneksi.php";
+					$nis = $_SESSION['nis'];
+					$sql = mysqli_query($conn, "SELECT nama FROM siswa WHERE siswa.nis = '$nis' ");
+					while ($hasil = mysqli_fetch_array($sql)) {
+			 ?>
+
+				<label>Nama anda : <?php echo $hasil['nama']; }?> </label>
+
+        </div>
 	<div class="table-responsive">
 
 	<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -49,15 +57,25 @@
             </tr>
         </thead>
         <tbody>
+					<?php
+							include "../include/koneksi.php";
+							$nis = $_SESSION['nis'];
+							$i = 0 + 1;
+							$sql="SELECT mapel.nama, guru.nama_guru, sum(absensi.hadir) as hadir, sum(absensi.sakit) as sakit, sum(absensi.izin) as izin, sum(absensi.alfa) as alfa FROM (((siswa join absensi on siswa.nis = absensi.nis) join mapel on absensi.id_mapel = mapel.id_mapel) join detail_mapel_guru
+						        on mapel.id_mapel = detail_mapel_guru.id_mapel) join guru on detail_mapel_guru.nip = guru.nip WHERE absensi.nis = '".$nis."' GROUP BY mapel.id_mapel";
+						  $result = mysqli_query($conn,$sql);
+							while ($hasil = mysqli_fetch_array($result)) {
+					 ?>
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-			</tr>	
+				<td><?php echo $i ?></td>
+				<td><?php echo $hasil['nama']; ?></td>
+				<td><?php echo $hasil['nama_guru']; ?></td>
+				<td><?php echo $hasil['hadir']; ?></td>
+        <td><?php echo $hasil['sakit']; ?></td>
+        <td><?php echo $hasil['izin']; ?></td>
+        <td><?php echo $hasil['alfa']; ?></td>
+			</tr>
+			<?php $i++; } ?>
         </tbody>
     </table>
     </div>

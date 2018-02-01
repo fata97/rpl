@@ -32,7 +32,7 @@
           <div class="avatar"><img src="https://66.media.tumblr.com/avatar_faa95867d2b3_128.png" width="100px" height="100px" />
           </div>
           <div style="color: white; font-weight: bold;">
-            nama : 
+            nama :
           </div>
           </center>
           </a>
@@ -99,7 +99,7 @@
   <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
-      
+
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
@@ -139,7 +139,19 @@
           <label>Password</label>
           <input type="password" class="form-control" name="password" placeholder="password" style="width: 250px" >
         </div>
-
+        <div class="form-grup" style="margin-right:10px;">
+          <label>Mapel yang diajar</label>
+  				<select  class="form-control kelas" name="mapel"  >
+  					<option value="">Pilih Mapel:</option>
+  					<?php
+  							include "../include/koneksi.php";
+  							$sql = mysqli_query($conn, "SELECT * FROM mapel ORDER BY nama");
+  							while ($hasil = mysqli_fetch_array($sql)) {
+  					 ?>
+  					<option value="<?php echo $hasil['id_mapel']; ?>"><?php echo $hasil['nama']; ?></option>
+  				<?php } ?>
+  				</select>
+  			</div>
       </div>
     </div>
       <input type="submit" name="submit" value="Simpan" class="btn btn-success">
@@ -148,7 +160,7 @@
       <br>
 </div>
         </div>
-      </div>  
+      </div>
     </div>
   </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

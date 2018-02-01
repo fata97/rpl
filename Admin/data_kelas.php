@@ -1,3 +1,8 @@
+<?php
+session_start();
+if(isset($_SESSION['id_admin'])){
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +37,14 @@
           <div class="avatar"><img src="https://66.media.tumblr.com/avatar_faa95867d2b3_128.png" width="100px" height="100px" />
           </div>
           <div style="color: white; font-weight: bold;">
-            nama : 
+            <?php
+                include "../include/koneksi.php";
+                $nip = $_SESSION['id_admin'];
+                $sql = mysqli_query($conn, "SELECT nama FROM admin WHERE admin.id_admin = '$nip' ");
+                while ($hasil = mysqli_fetch_array($sql)) {
+             ?>
+
+              nama : <?php echo $hasil['nama']; }?>
           </div>
           </center>
           </a>
@@ -142,3 +154,9 @@
 </body>
 
 </html>
+
+<?php
+}else{
+	header("location:../login/login.php");
+}
+?>

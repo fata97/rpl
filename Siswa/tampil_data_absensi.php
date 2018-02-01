@@ -1,3 +1,7 @@
+<?php
+session_start();
+if(isset($_SESSION['nis'])){
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +36,14 @@
           <div class="avatar"><img src="https://66.media.tumblr.com/avatar_faa95867d2b3_128.png" width="100px" height="100px" />
           </div>
           <div style="color: white; font-weight: bold;">
-            nama : 
+            <?php
+                include "../include/koneksi.php";
+                $nis = $_SESSION['nis'];
+                $sql = mysqli_query($conn, "SELECT nama FROM siswa WHERE siswa.nis = '$nis' ");
+                while ($hasil = mysqli_fetch_array($sql)) {
+             ?>
+
+              nama : <?php echo $hasil['nama']; }?>
           </div>
           </center>
           </a>
@@ -71,18 +82,18 @@
   <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
-      
+
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
           <i class="fa fa-table"></i> Data Absensi</div>
         </div>
         <div class="container">
-          <?php  
+          <?php
               require_once "../table_tampil_absen_siswa.php";
           ?>
         </div>
-      </div>  
+      </div>
     </div>
   </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -97,7 +108,7 @@
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
+            <a class="btn btn-primary" href="../logout.php">Logout</a>
           </div>
         </div>
       </div>
@@ -118,3 +129,8 @@
 </body>
 
 </html>
+<?php
+}else{
+	header("location:../login/login.php");
+}
+?>

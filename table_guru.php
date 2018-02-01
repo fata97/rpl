@@ -41,13 +41,13 @@
 					<?php
 			        include "include/koneksi.php";
 			        $i = 0 + 1;
-			        $sql = mysqli_query($conn, "SELECT * FROM guru ORDER BY nama");
+			        $sql = mysqli_query($conn, "SELECT * FROM guru ORDER BY nama_guru");
 			        while ($hasil = mysqli_fetch_array($sql)) {
 			     ?>
 					 <tr>
 			      <td style="text-align: center;"><?php echo $i; ?></td>
 			      <td><?php echo $hasil['nip']; ?></td>
-			      <td><?php echo $hasil['nama']; ?></td>
+			      <td><?php echo $hasil['nama_guru']; ?></td>
 						<td><?php echo $hasil['alamat']; ?></td>
 						<td><?php echo $hasil['no_hp']; ?></td>
 			      <td style="text-align: center;"><a href="edit_data_guru.php?edit=<?php echo $hasil['nip']; ?>" class="btn btn-warning">Edit</a>

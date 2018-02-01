@@ -114,7 +114,7 @@
         </div>
         <div class="form-group">
           <label>Nama Guru</label>
-          <input type="text" class="form-control" name="nama_guru" placeholder="Nama Guru" style="width: 250px" value="<?php echo $hasil['nama']; ?>">
+          <input type="text" class="form-control" name="nama_guru" placeholder="Nama Guru" style="width: 250px" value="<?php echo $hasil['nama_guru']; ?>">
         </div>
         <div class="form-group">
           <label>Alamat</label>
@@ -134,7 +134,19 @@
           <label>Password</label>
           <input type="password" class="form-control" name="password" placeholder="password" value="<?php echo $hasil['password']; ?>" >
         </div>
-
+        <div class="form-grup" style="margin-right:10px;">
+          <label>Mapel yang diajar</label>
+  				<select  class="form-control kelas" name="mapel"  >
+  					<option value="">Pilih Mapel:</option>
+  					<?php
+  							include "../include/koneksi.php";
+  							$sql = mysqli_query($conn, "SELECT * FROM mapel ORDER BY nama");
+  							while ($hasil = mysqli_fetch_array($sql)) {
+  					 ?>
+  					<option value="<?php echo $hasil['id_mapel']; ?>"><?php echo $hasil['nama']; ?></option>
+  				<?php } ?>
+  				</select>
+  			</div>
       </div>
     </div>
       <input type="submit" name="submit" value="Simpan" class="btn btn-success">

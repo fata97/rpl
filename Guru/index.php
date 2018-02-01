@@ -1,3 +1,7 @@
+<?php
+session_start();
+if(isset($_SESSION['nip'])){
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +43,14 @@
           <div class="avatar"><img src="https://66.media.tumblr.com/avatar_faa95867d2b3_128.png" width="100px" height="100px" />
           </div>
           <div style="color: white; font-weight: bold;">
-            nama : 
+            <?php
+                include "../include/koneksi.php";
+                $nip = $_SESSION['nip'];
+                $sql = mysqli_query($conn, "SELECT nama_guru FROM guru WHERE guru.nip = '$nip' ");
+                while ($hasil = mysqli_fetch_array($sql)) {
+             ?>
+
+              nama : <?php echo $hasil['nama_guru']; }?>
           </div>
           </center>
 
@@ -82,15 +93,15 @@
   </nav>
   <div class="content-wrapper">
     <div class="container-fluid">
-      
+
       <div class="">
         <div class="jumbotron">
-          <h1 style="text-align: center; padding-bottom: 20px; color: white;">SELAMAT DATANG GURU</h1> 
-          <p style="text-align: center; font-weight: bold;">Silahkan pilih menu sesuai yang diinginkan</p> 
+          <h1 style="text-align: center; padding-bottom: 20px; color: white;">SELAMAT DATANG GURU</h1>
+          <p style="text-align: center; font-weight: bold;">Silahkan pilih menu sesuai yang diinginkan</p>
           <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
         </div>
       </div>
-      
+
     <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
@@ -115,7 +126,7 @@
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
+            <a class="btn btn-primary" href="../logout.php">Logout</a>
           </div>
         </div>
       </div>
@@ -138,3 +149,8 @@
 </body>
 
 </html>
+<?php
+}else{
+	header("location:../login/login.php");
+}
+?>
