@@ -66,6 +66,7 @@
 		<br>
 		<div class="table-responsive">
 
+		<form action='proses_tambah_absensi.php' method='post' >
 		<div id="txtHint">
 			<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
@@ -74,13 +75,14 @@
                 <th>NAMA</th>
                 <th>ABSENSI</th>
                 <th>WAKTU SEKARANG</th>
-								<th>AKSI</th>
             </tr>
         </thead>
         <tbody>
         </tbody>
     </table>
 	</div>
+
+	<input id='tombol' type='submit' name='submit' value='Konfirmasi' class='btn btn-success'></form>
 
 	</div>
 </div>

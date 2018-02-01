@@ -33,7 +33,6 @@ th {text-align: left;}
                   <th>NAMA</th>
                   <th>WAKTU SEKARANG</th>
                   <th>ABSENSI</th>
-  								<th>AKSI</th>
               </tr>
           </thead>
       ";
@@ -45,10 +44,7 @@ th {text-align: left;}
       echo "<td>" . $i . "</td>";
       echo "<td>" . $row['nama'] . "</td>";
       echo "<td>" . $tgl . "</td>";
-      echo "
-
-      <td>
-      <form action='proses_tambah_absensi.php' method='post' class='form-inline'>
+      echo "<td>
       <input type='radio' name='kehadiran' id='kehadiran' value='hadir' checked>
   					<span class='checkmark'>Hadir</span>
             <input type='radio' name='kehadiran' id='kehadiran' value='sakit' >
@@ -57,11 +53,9 @@ th {text-align: left;}
   					<span class='checkmark'>Izin</span>
             <input type='radio' name='kehadiran' id='kehadiran' value='alfa' >
   					<span class='checkmark'>Alfa</span>
-
-      <input type='hidden' name='tanggal' value='". $tgl ."' >
-      <input type='hidden' name='nis' value='". $row['nis'] ."' >
-      <input type='hidden' name='id_mapel' value='". $mapel ."' >
-      <input id='tombol' type='submit' name='submit' value='Konfirmasi' class='btn btn-success'></form></td>";
+            <input type='hidden' name='tanggal' value='". $tgl ."' >
+          	<input type='hidden' name='nis' value='". $row['nis'] ."' >
+          	<input type='hidden' name='id_mapel' value='". $mapel ."' ></td>";
       echo "</tr></tbody>";
       $i++;
       }
